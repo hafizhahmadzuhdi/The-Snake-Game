@@ -1,15 +1,22 @@
 var s;
 var scl = 20; //Size of grid
 
+var food;
+
 function setup(){
     createCanvas(800, 800);
     s = new Snake();
+    frameRate(10);
+    food = createVector(random(width), random(height)); 
 }
 
 function draw(){
     background(51);
     s.update();
     s.show();
+
+    fill(255, 0, 100);
+    rect(food.x, food.y, scl, scl);
 }
 
 function keyPressed(){
