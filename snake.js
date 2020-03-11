@@ -4,6 +4,17 @@ function Snake(){
     this.xspeed = 1;
     this.yspeed = 0;
 
+    this.eat = function(pos){
+        var d = dist(this.x, this.y, pos.x, pos.y);
+        if(d < 1){
+            //yes it is the same location
+            return true;
+        } else {
+            //No, it is not the location (it will not be eaten by the snake)
+            return false;
+        }
+    }
+
     this.dir = function(x, y){
         this.xspeed = x;
         this.yspeed = y;
@@ -24,4 +35,6 @@ function Snake(){
         //draw a rectangle (10 by 10, with the speed movement of x and y constant)
         rect(this.x, this.y, scl, scl);
     }
+
+    
 }
