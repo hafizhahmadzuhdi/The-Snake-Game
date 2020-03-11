@@ -1,4 +1,5 @@
 var s;
+var scl = 20; //Size of grid
 
 function setup(){
     createCanvas(800, 800);
