@@ -4,7 +4,8 @@ var scl = 20; //Size of grid
 var food;
 
 function setup(){
-    createCanvas(800, 800);
+    var canvas = createCanvas(800, 800);
+    canvas.parent('snake-canvas');
     s = new Snake();
     frameRate(10);
     pickLocation(); 
